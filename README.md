@@ -83,23 +83,17 @@ and the estimated effect of other variables is not as expected. Let's visit the 
 **Assumptions - PooledOLS**
 
 TS.1 :  Linear in Parameters - Linearity is ensured by taking functional forms of some variables 
+
 TS.2 :  No perfect collinearity - Pearson’s Correlation Matrix reveals no perfect collinearity between the chosen indicators 
+
 TS.3 : Contemporaneous Exogeneity - Ensures that estimators are consistent 
+
 TS.4 : Homoscedasticity - Can be evaluated by various tests like White test, Breusch-Pagan test or just by plotting Residuals vs Fitted Values and observing its variance 
+
 TS.5 - No Serial Correlation among error term (residuals) - Durbin-Watson test, Ljung-Box test 
 
 
 **Heteroskedasticity Tests**
-
-Test
-LM (p-val)
-F p-val
-White-Test
-1.46e-21
-3.02e-37
-Breusch-Pagan-Test
-1.62e-09
-1.73e-10
 
 
 ![image](https://github.com/Shritej24c/Econometrics/blob/main/images/hetero%20tests.png)
