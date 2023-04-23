@@ -13,11 +13,6 @@ Life expectancy has burgeoned since the advent of industrialization in the early
 average has now more than doubled to 70 years. Yet, we still see inequality in life
 expectancy across and within countries. In 2020, Monaco sits at the top with the highest life expectancy at 86 years whereas some countries in the Sub-Saharan African (SSA) region, for example, the Central African Republic, have a life expectancy of 54.6 years
 
-
-Following plot shows how Life Expectancy has changed from 1950 - 2021 for some high GDP/capita countries compared to Central African Republic (lowest life expectancy):
-
-![image](https://github.com/Shritej24c/Econometrics/blob/main/images/life_expect.png)
-
 There's a drastic difference in Life Expectancy which points to the scope of improvement in these countries with similar low life expectancy. 
 
 Below is the multiple Bar Charts which shows the average Life Expectancy across different regions throughout the world. 
@@ -96,6 +91,17 @@ TS.5 - No Serial Correlation among error term (residuals) - Durbin-Watson test, 
 
 **Heteroskedasticity Tests**
 
+Test
+LM (p-val)
+F p-val
+White-Test
+1.46e-21
+3.02e-37
+Breusch-Pagan-Test
+1.62e-09
+1.73e-10
+
+
 ![image](https://github.com/Shritej24c/Econometrics/blob/main/images/hetero%20tests.png)
 
 **Residual Plots**
@@ -141,6 +147,7 @@ Individual effects of independent variables vary over time
 
 Observing the results of the Random Effects, we can see that they almost mirror the F.E results, varying slightly in the estimates. Here, the R-squared is pretty decent as well. After eliminating Pooled OLS as our choice of model, we evaluated for endogeneity to determine the best model between F.E and R.E.
 
+![image](https://github.com/Shritej24c/Econometrics/blob/main/images/random%20results.png)
 
 **Hausman Test - For Endogeneity**
 
@@ -152,7 +159,38 @@ factors and their effect on Life expectancy. Results of the Hausman test can be 
 
 b0 - always consistent; b1 - only consistent under H0
 
+Null Hypothesis is rejected, therefore Fixed Effects is preferred over Random Effects since the estimator is consistent.
 
 
-Null Hypothesis is rejected, therefore Fixed Effects is preferred over Random Effects since the estimator is consistent
+**Final Model - Fixed Effects Model**
+
+
+![image](https://github.com/Shritej24c/Econometrics/blob/main/images/final%20equation.png)
+
+From Fixed Effects results - Except for Prevalence of Undernourishment all variables are significant 
+(below results are concluded by keeping other factors constant)
+1. 1% Increase in CO2 emissions increases Life Expectancy by 0.07 years (not expected)
+2. 1% points increase in health and education expenditure (% of GDP) cause life expectancy to increase by 0.24 and 0.23 years respectively (expected)
+3. 1% point increase in unemployment (% of total labor force) decreases life expectancy by .17 years (e)
+4. 1 point increase in the CPIA rating decreases the life expectancy by 1.1 years (e)
+5. 1% increase in disability-adjusted life year per 100,000 individuals, decreases L.E. by 0.37 years (e)
+
+
+**Conclusions**
+
+1. Most of our independent variables showed expected significant behaviour.
+2. An increase in health and education expenditure and a decrease in the unemployment rate and corruption should have positive ceteris paribus effect on life expectancy.
+3. An increase in disability-adjusted life years specifically due to communicable diseases puts the population in danger and lowers the life expectancy of that respective country. The opposite effect was observed of disability-adjusted life years specifically due to non-communicable diseases & injuries.
+3. CO2 output has a positive effect on life expectancy due to industrialization.
+4. Our analysis shows what government can do to uplift the life-expectancy in these low-income countries and how can it direct the efforts in order to achieve this goal.
+
+
+**Limitations**
+
+1. Further, we can control for endogeneity by introducing Instrument Variables and performing 2SLS.
+2. First, due to the lack of availability of time-series data on certain factors such as doctor-patient ratio, public vs private healthcare services, and efficiency we cannot control for these factors.
+3. We are not analyzing causal impact of any policies that might have been in effect during the time period.
+4. Certain factors might have data quality issues, since some countries have good reporting systems while others rely on estimation methods and data quality varies over countries.
+5. Completing this study with details analysis of these determinants (probably at micro level analysis) will be important for the purposes of effective policy making.
+
 
