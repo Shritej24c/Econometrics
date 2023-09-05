@@ -176,12 +176,3 @@ From Fixed Effects results - Except for the Prevalence of Undernourishment all v
 4. Our analysis shows what the government can do to uplift the life expectancy in these low-income countries and how can it direct the efforts to achieve this goal.
 
 
-**Limitations**
-
-1. Further, we can control for endogeneity by introducing Instrument Variables and performing 2SLS.
-2. First, due to the lack of availability of time-series data on certain factors such as doctor-patient ratio, public vs. private healthcare services, and efficiency we cannot control for these factors.
-3. We are not analyzing the causal impact of any policies that might have been in effect during the period.
-4. Certain factors might have data quality issues, since some countries have good reporting systems while others rely on estimation methods and data quality varies over countries.
-5. Completing this study with a details analysis of these determinants (probably at micro-level analysis) will be important for effective policy making.
-
-
