@@ -15,11 +15,11 @@ expectancy across and within countries. In 2020, Monaco sits at the top with the
 
 There's a drastic difference in Life Expectancy which points to the scope of improvement in these countries with similar low life expectancy. 
 
-Below is the multiple Bar Charts which shows the average Life Expectancy across different regions throughout the world. 
+Below are the multiple Bar Charts which show the average Life Expectancy across different regions throughout the world. 
 
 ![image](https://github.com/Shritej24c/Econometrics/blob/main/images/le_reg.png) 
 
-The Sub-Saharan African region experiences the lowest life expectancy at birth compared to other regions over the past 3 decades. In the year 2019, the Middle East and North Africa had an average life expectancy of 74.27 years compared to the SSA region’s average life expectancy of 61.6 years. From 2, we can see the variation of average life expectancy across various regions around the world for the last
+The Sub-Saharan African region experiences the lowest life expectancy at birth compared to other regions over the past 3 decades. In the year 2019, the Middle East and North Africa had an average life expectancy of 74.27 years compared to the SSA region’s average life expectancy of 61.6 years. From 2, we can see the variation in average life expectancy across various regions around the world for the last
 3 decades. Moreover, SSA countries have consistently ranked as the lowest-earning countries in terms of GDP per capita. Therefore, there is a huge scope for improvement in life expectancy in SSA countries and hence our research focuses on the 40 Sub-Saharan African (SSA) countries with the lowest GDP per capita.
 
 **Research Questions**
@@ -44,18 +44,18 @@ In this paper, we aim to have a better understanding of factors affecting life e
 
 **Data**
 
-Sub-Saharan African (SSA) countries - Low Life Expectancy & Low GDP per capita
+Sub-Saharan African (SSA) countries - Low Life Expectancy and low GDP per capita
 
-Main Sources of data: The World Data Bank and  Our World in Data
+Main Sources of Data: The World Data Bank and  Our World in Data
 
-Out of 40+ SSA countries, due to lot of missing values for the indicators chosen, we focused on only 19
+Out of 40+ SSA countries, due to a lot of missing values for the indicators chosen, we focused on only 19
 countries in that region
 
 No record of CPIA data (corruption rating) for any country before 2005 
 
-Avoided data after 2019 due to prevalence of COVID
+Avoided data after 2019 due to the prevalence of COVID
 
-Indicators like Sanitation, Water Supply and Living standards weren’t available for many countries
+Indicators like Sanitation, Water Supply, and Living standards weren’t available for many countries
 
 Final panel data - N (countries) = 19 & T (years) = 15 (2005-2019) 
 
@@ -76,19 +76,19 @@ Pooled OLS can be written as follows:
 
 ![image](https://github.com/Shritej24c/Econometrics/blob/main/images/pooled%20results.png)
 
-From the above resutls, we observe that our main 2 determinants; health and education came out to be statistically insignificant
+From the above results, we observe that our main 2 determinants; health and education came out to be statistically insignificant
 and the estimated effect of other variables is not as expected. Let's visit the assumptions for PooledOLS and verify whether they satisfy or not. 
 
 
 **Assumptions - PooledOLS**
 
-TS.1 :  Linear in Parameters - Linearity is ensured by taking functional forms of some variables 
+TS.1:  Linear in Parameters - Linearity is ensured by taking functional forms of some variables 
 
-TS.2 :  No perfect collinearity - Pearson’s Correlation Matrix reveals no perfect collinearity between the chosen indicators 
+TS.2:  No perfect collinearity - Pearson’s Correlation Matrix reveals no perfect collinearity between the chosen indicators 
 
-TS.3 : Contemporaneous Exogeneity - Ensures that estimators are consistent 
+TS.3: Contemporaneous Exogeneity - Ensures that estimators are consistent 
 
-TS.4 : Homoscedasticity - Can be evaluated by various tests like White test, Breusch-Pagan test or just by plotting Residuals vs Fitted Values and observing its variance 
+TS.4: Homoscedasticity - Can be evaluated by various tests like the White test, Breusch-Pagan test, or just by plotting Residuals vs. Fitted Values and observing their variance 
 
 TS.5 - No Serial Correlation among error term (residuals) - Durbin-Watson test, Ljung-Box test 
 
@@ -110,7 +110,7 @@ TS.5 - No Serial Correlation among error term (residuals) - Durbin-Watson test, 
     2 – 4 = negative autocorrelation (the nearer to four the higher the correlation)
         Results: Statistic = 1.64 ( a slight positive autocorrelation)
 2. Ljung-Box Test: Checks for autocorrelation between all lags of error residuals
-    Results: p-val for all lags < 0.05 (No autocorrelation between residuals)
+    Results: p-value for all lags < 0.05 (No autocorrelation between residuals)
 
 
 **TS3. : Contemporaneous Exogeneity**
@@ -145,15 +145,15 @@ Observing the results of the Random Effects, we can see that they almost mirror 
 
 **Hausman Test - For Endogeneity**
 
-Using Hausman test to test for covariance between alpha and independent variables. We rejected the
+Using the Hausman test to test for covariance between alpha and independent variables. We rejected the
 null hypothesis, hence we chose Fixed effects as our final econometrics model to determine the significant
-factors and their effect on Life expectancy. Results of the Hausman test can be seen as follows:
+factors and their effect on Life expectancy. The results of the Hausman test can be seen as follows:
 
 ![image](https://github.com/Shritej24c/Econometrics/blob/main/images/hausmann.png)
 
 b0 - always consistent; b1 - only consistent under H0
 
-Null Hypothesis is rejected, therefore Fixed Effects is preferred over Random Effects since the estimator is consistent.
+The null hypothesis is rejected, therefore Fixed Effects are preferred over Random Effects since the estimator is consistent.
 
 
 **Final Model - Fixed Effects Model**
@@ -161,30 +161,30 @@ Null Hypothesis is rejected, therefore Fixed Effects is preferred over Random Ef
 
 ![image](https://github.com/Shritej24c/Econometrics/blob/main/images/final%20equation.png)
 
-From Fixed Effects results - Except for Prevalence of Undernourishment all variables are significant 
-(below results are concluded by keeping other factors constant)
-1. 1% Increase in CO2 emissions increases Life Expectancy by 0.07 years (not expected)
-2. 1% points increase in health and education expenditure (% of GDP) cause life expectancy to increase by 0.24 and 0.23 years respectively (expected)
-3. 1% point increase in unemployment (% of total labor force) decreases life expectancy by .17 years (e)
+From Fixed Effects results - Except for the Prevalence of Undernourishment all variables are significant 
+(The below results are concluded by keeping other factors constant)
+1. A 1% Increase in CO2 emissions increases Life Expectancy by 0.07 years (not expected)
+2. A 1% points increase in health and education expenditure (% of GDP) causes life expectancy to increase by 0.24 and 0.23 years respectively (expected)
+3. A 1% point increase in unemployment (% of total labor force) decreases life expectancy by .17 years (e)
 4. 1 point increase in the CPIA rating decreases the life expectancy by 1.1 years (e)
-5. 1% increase in disability-adjusted life year per 100,000 individuals, decreases L.E. by 0.37 years (e)
+5. A 1% increase in disability-adjusted life year per 100,000 individuals, decreases L.E. by 0.37 years (e)
 
 
 **Conclusions**
 
-1. Most of our independent variables showed expected significant behaviour.
-2. An increase in health and education expenditure and a decrease in the unemployment rate and corruption should have positive ceteris paribus effect on life expectancy.
+1. Most of our independent variables showed expected significant behavior.
+2. An increase in health and education expenditure and a decrease in the unemployment rate and corruption should have a positive ceteris paribus effect on life expectancy.
 3. An increase in disability-adjusted life years specifically due to communicable diseases puts the population in danger and lowers the life expectancy of that respective country. The opposite effect was observed of disability-adjusted life years specifically due to non-communicable diseases & injuries.
 3. CO2 output has a positive effect on life expectancy due to industrialization.
-4. Our analysis shows what government can do to uplift the life-expectancy in these low-income countries and how can it direct the efforts in order to achieve this goal.
+4. Our analysis shows what the government can do to uplift the life expectancy in these low-income countries and how can it direct the efforts in order to achieve this goal.
 
 
 **Limitations**
 
 1. Further, we can control for endogeneity by introducing Instrument Variables and performing 2SLS.
-2. First, due to the lack of availability of time-series data on certain factors such as doctor-patient ratio, public vs private healthcare services, and efficiency we cannot control for these factors.
-3. We are not analyzing causal impact of any policies that might have been in effect during the time period.
+2. First, due to the lack of availability of time-series data on certain factors such as doctor-patient ratio, public vs. private healthcare services, and efficiency we cannot control for these factors.
+3. We are not analyzing the causal impact of any policies that might have been in effect during the time period.
 4. Certain factors might have data quality issues, since some countries have good reporting systems while others rely on estimation methods and data quality varies over countries.
-5. Completing this study with details analysis of these determinants (probably at micro level analysis) will be important for the purposes of effective policy making.
+5. Completing this study with a details analysis of these determinants (probably at micro-level analysis) will be important for the purposes of effective policy making.
 
 
